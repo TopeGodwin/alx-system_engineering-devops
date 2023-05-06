@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Displays all acive IPv4 addresses on the machine.
-hostname -I | tr " " "\n" | grep . | cat -e
+
+hostname -I | cut -d' ' -f1 ; hostname -i
